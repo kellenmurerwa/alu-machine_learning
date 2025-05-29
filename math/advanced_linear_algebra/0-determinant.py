@@ -3,8 +3,6 @@
 A function def determinant(matrix): 
 that calculates the determinant of a matrix
 """
-
-
 def determinant(matrix):
     """
     Calculating the determinant of a matrix and returning it.
