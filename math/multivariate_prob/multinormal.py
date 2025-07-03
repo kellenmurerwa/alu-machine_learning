@@ -66,23 +66,17 @@ class MultiNormal:
             raise TypeError("data must be a 2D numpy.ndarray")
         if data.shape[1] < 2:
             raise ValueError("data must contain multiple data points")
-
         # Store dimensions
         self.d, self.n = data.shape
-
         # Calculate mean (d, 1)
         self.mean = np.mean(data, axis=1, keepdims=True)
-
         # Center the data
         centered = data - self.mean
-
         # Calculate covariance matrix (d, d)
         self.cov = (centered @ centered.T) / (self.n - 1)
-
     def __str__(self):
         """String representation of the distribution"""
         return f"MultiNormal(mean={self.mean.T}, cov={self.cov})"
-
     def pdf(self, x):
         """
         Calculate probability density function at point x.
@@ -92,7 +86,6 @@ class MultiNormal:
             raise TypeError("x must be a numpy.ndarray")
         if x.shape != (self.d, 1):
             raise ValueError(f"x must have shape ({self.d}, 1)")
-
         # Calculate PDF
         det = np.linalg.det(self.cov)
         inv = np.linalg.inv(self.cov)
