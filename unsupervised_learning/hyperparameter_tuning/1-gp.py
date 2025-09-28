@@ -1,4 +1,7 @@
-s script represents a noiseless 1D Gaussian process
+#!/usr/bin/env python3
+
+"""
+This script represents a noiseless 1D Gaussian process
 """
 
 import numpy as np
