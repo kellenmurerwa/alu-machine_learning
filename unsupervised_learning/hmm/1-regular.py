@@ -38,4 +38,3 @@ def regular(P):
         return S
     except Exception:
         return None
-    

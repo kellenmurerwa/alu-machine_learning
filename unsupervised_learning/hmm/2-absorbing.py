@@ -43,4 +43,3 @@ def absorbing(P):
         P = P[idx]
     except Exception:
         return False
-    

@@ -34,4 +34,3 @@ def markov_chain(P, s, t=1):
         return np.matmul(s, np.linalg.matrix_power(P, t))
     except Exception:
         return None
-    

@@ -57,4 +57,3 @@ def forward(Observations, Emission, Transition, Initial):
         return P, alpha
     except Exception:
         return None, None
-    
